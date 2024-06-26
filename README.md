@@ -1,4 +1,6 @@
 
+[Documentation](https://docs.scoopika.com/examples/nextjs-starter-1)
+
 ## Getting Started
 
 First rename `.env.example` to `.env` and enter your Scoopika token and remote history store ID if you have one (notice that this template won't work as expected without a history store).

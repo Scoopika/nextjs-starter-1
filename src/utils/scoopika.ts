@@ -11,7 +11,7 @@ export const endpoint = new Endpoint({
   scoopika,
   agents: (scoopika) => {
     const agent = new Agent(
-        "AGENT_ID", // replace with your agent ID
+        "7bfdb069-6da6-4236-b54e-2fcb8a726644", // replace with your agent ID
         scoopika
     );
 

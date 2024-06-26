@@ -10,7 +10,7 @@ import { RunHistory } from "@scoopika/types";
 import { useState } from "react";
 
 interface Props {
-  id: string;
+  id?: string; // if session ID not provided a random one will be created
 }
 
 const Message = ({ msg }: { msg: RunHistory }) => {
@@ -26,7 +26,7 @@ const Message = ({ msg }: { msg: RunHistory }) => {
 };
 
 export default function Chat({ id }: Props) {
-  const agent = new Agent("AGENT_ID", client); // replace with your agent ID
+  const agent = new Agent("7bfdb069-6da6-4236-b54e-2fcb8a726644", client); // replace with your agent ID
   const [message, setMessage] = useState<string>("");
   const {
     messages,
