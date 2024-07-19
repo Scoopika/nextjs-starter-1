@@ -5,7 +5,7 @@ import Sessions from "@/components/sessions";
 export default async function Home() {
 
   const userId = await getUser(); // replace with your auth logic
-  const sessions = await scoopika.listUserSessions(userId);
+  const sessions = await scoopika.memory.getUserSessions(userId);
 
   return (
     <main className="">

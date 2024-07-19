@@ -9,7 +9,7 @@ interface Props {
 }
 
 export async function newSession(props: Props) {
-  const session = await scoopika.newSession(props);
+  const session = await scoopika.memory.newSession(props);
 
   await revalidatePath("/", "page");
   return true;
