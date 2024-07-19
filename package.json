@@ -9,10 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@scoopika/client": "^1.10.0",
-    "@scoopika/react": "^1.0.0",
-    "@scoopika/scoopika": "^1.5.0",
-    "@scoopika/types": "^2.2.8",
+    "@scoopika/client": "^2.0.1",
+    "@scoopika/react": "^2.0.1",
+    "@scoopika/scoopika": "^2.0.4",
+    "@scoopika/types": "^3.0.2",
     "next": "14.2.4",
     "react": "^18",
     "react-dom": "^18"

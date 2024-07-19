@@ -26,7 +26,7 @@ const Message = ({ msg }: { msg: RunHistory }) => {
 };
 
 export default function Chat({ id }: Props) {
-  const agent = new Agent("7bfdb069-6da6-4236-b54e-2fcb8a726644", client); // replace with your agent ID
+  const agent = new Agent(`${process.env.NEXT_PUBLIC_AGENT_ID}`, client);
   const [message, setMessage] = useState<string>("");
   const {
     messages,
@@ -46,11 +46,16 @@ export default function Chat({ id }: Props) {
   const run = async () => {
     if (loading || generating) return;
 
-    newRequest({
+    setMessage("");
+    const { data, error } = await newRequest({
       inputs: { message },
       options: { session_id: id }, // required for now
+      hooks: {
+        onModelResponse: (r) => console.log("response", r),
+        onToolCall: (c) => console.log("call", c),
+        onToolResult: (r) => console.log("result", r)
+      }
     });
-    setMessage("");
   };
 
   return (
